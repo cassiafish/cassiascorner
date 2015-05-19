@@ -228,7 +228,6 @@ a:hover, a:active {
       top: 60px;
     }
 
-
     .sm-balloon {
        @include at2x("../img/small-airballoon768", png, 30px, 44px);
       width: 30px;
@@ -369,9 +368,9 @@ a:hover, a:active {
   }
 
   .about-image {
-     @include at2x("../img/about", png, 200px, 147px);
+     @include at2x("../img/about", png, 200px, 143px);
     width: 200px;
-    height: 147px;
+    height: 143px;
   }
 
   .contact-image {
