@@ -1,2 +1,0 @@
-# cassiascorner
-my portfolio 

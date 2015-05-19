@@ -1,0 +1,345 @@
+// Colors
+$main-color:                 #fda3a3;
+$secondary-color:            #19323b;
+$third-color:                #2e5a64;
+$forth-color:                #70b98b;
+$fifth-color:                #fff1df;
+$header1-font-color:         $main-color;
+$header2-font-color:          $fifth-color;
+$font-color:                 $fifth-color;
+
+// Fonts
+$p-font-stack:               'Cabin', sans-serif;
+$h1-font-stack:              'Lobster Two', cursive;
+$h2-font-stack:              'Cabin', sans-serif;
+$h3-font-stack:              'Cabin', sans-serif;
+
+// Set element colors
+$background-overlay-color:   $secondary-color;
+$background-overlay-opacity: 1;
+$link-color:                 $secondary-color;
+$link-color-hover:           $third-color;
+$navbar-selector-opacity:    1;
+$bar-color:                  $secondary-color;
+
+/* This mixin creates rbga color from hex and opacity */
+@mixin background-opacity($color, $opacity: 0.5) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+html, body {
+  font-family: $p-font-stack;
+  @include background-opacity($background-overlay-color, $background-overlay-opacity);
+}
+
+/* Style the href links */
+a:link, a:visited {
+  color: $link-color;
+}
+a:hover, a:active {
+  color: $link-color-hover;
+  text-decoration: none;
+}
+
+.info-container {
+  h1 {
+    color: $header1-font-color;
+    font-family: $h1-font-stack;
+    font-size: 120px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 110px;
+    text-align: right;
+  }
+
+  h2 {
+    padding-top: 0;
+    margin-top: 0;
+    color: $header2-font-color;
+    font-family: $h2-font-stack;
+    font-size: 35px;
+    text-align: right;
+  }
+
+  h3 {
+    color: $header2-font-color;
+    font-family: $h2-font-stack;
+    font-size: 25px;
+    font-weight: 200;
+  }
+
+  h3:hover {
+    color: $third-color;
+    font-family: $h2-font-stack;
+    font-size: 25px;
+    font-weight: 200;
+  }
+
+  strong {
+    color: $main-color;
+  }
+}
+
+/* Style the main content */
+.top-container {
+  @include background-opacity($background-overlay-color, $background-overlay-opacity);
+  background-image: url("/cassiascorner/public/img/img-noise-361x370.png");
+  padding: 40px 0 100px;
+
+  p {
+    color: $font-color;
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .big-balloon {
+    background-image: url("/cassiascorner/public/img/big-airballoon.png");
+    width: 100px;
+    height: 147px;
+    position: relative;
+    left: 40px;
+  }
+
+  .med-balloon {
+    background-image: url("/cassiascorner/public/img/med-airballoon.png");
+    width: 75px;
+    height: 110px;
+    position: relative;
+    left: 150px;
+  }
+
+  .sm-balloon {
+    background-image: url("/cassiascorner/public/img/small-airballoon.png");
+    width: 50px;
+    height: 74px;
+    position: relative;
+    left: 40px;
+  }
+
+  .cherry-blossoms {
+    background-image: url("/cassiascorner/public/img/cherryblossoms.png");
+    width: 680px;
+    height: 152px;
+    position: relative;
+    top: 20px;
+    right: -20px;
+  }
+
+  @media (max-width: 992px) {
+    h1 {
+      font-size: 100px;
+      line-height: 95px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    .cherry-blossoms {
+      background-image: url("/cassiascorner/public/img/cherryblossoms992.png");
+      width: 570px;
+      height: 127px;
+    }
+  }
+
+  @media (max-width: 820px) {
+
+    .med-balloon {
+      left: 100px;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 0 50px;
+
+    h1 {
+      font-size: 80px;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+
+    .big-balloon {
+      background-image: url("/cassiascorner/public/img/big-airballoon768.png");
+      width: 75px;
+      height: 111px;
+      position: relative;
+      left: 10px;
+      top: 20px;
+    }
+
+    .med-balloon {
+      background-image: url("/cassiascorner/public/img/med-airballoon768.png");
+      width: 50px;
+      height: 74px;
+      position: relative;
+      left: 70px;
+      top: 35px;
+    }
+
+    .sm-balloon {
+      background-image: url("/cassiascorner/public/img/small-airballoon768.png");
+      width: 30px;
+      height: 44px;
+      position: relative;
+      left: 15px;
+      top: 20px;
+    }
+
+    .cherry-blossoms {
+      background-image: url("/cassiascorner/public/img/cherryblossoms768.png");
+      width: 460px;
+      height: 103px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 65px;
+      line-height: 60px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    .cherry-blossoms {
+      background-image: url("/cassiascorner/public/img/cherryblossoms600.png");
+      width: 360px;
+      height: 80px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 0;
+
+    h1 {
+      font-size: 58px;
+      line-height: 60px;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+
+    h2 {
+      padding-bottom: 10px;
+    }
+
+    .big-balloon {
+      display: none;
+    }
+
+    .med-balloon {
+      top: 90px;
+      left: 0;
+    }
+
+    .sm-balloon {
+      top: 90px;
+      left: 45px;
+    }
+
+    .cherry-blossoms {
+      background-image: url("/cassiascorner/public/img/cherryblossoms480.png");
+      width: 300px;
+      height: 67px;
+      top: 5px;
+    }
+  }
+}
+
+.nav-container {
+  @include background-opacity($main-color, 1);
+  padding: 20px 0 0 0;
+
+  h3 {
+    position: relative;
+    top: 107px;
+  }
+
+  .design, .about, .contact{
+    cursor: pointer;
+  }
+
+  .design-button {
+    margin-bottom: 20px;
+    width: 210px;
+    height: 210px;
+    border: 4px solid $fifth-color;
+    border-radius: 50%;
+    background: $secondary-color;
+  }
+
+  .about-button {
+    margin-bottom: 20px;
+    width: 210px;
+    height: 210px;
+    border: 4px solid $fifth-color;
+    border-radius: 50%;
+    background: $secondary-color;
+  }
+
+  .contact-button {
+    width: 210px;
+    height: 210px;
+    border: 4px solid $fifth-color;
+    border-radius: 50%;
+    background: $secondary-color;
+  }
+
+  .design-image {
+    background-image: url("/cassiascorner/public/img/design.png");
+    width: 200px;
+    height: 143px;
+  }
+
+  .about-image {
+    background-image: url("/cassiascorner/public/img/about.png");
+    width: 200px;
+    height: 143px;
+  }
+
+  .contact-image {
+    background-image: url("/cassiascorner/public/img/contact.png");
+    width: 200px;
+    height: 143px;
+  }
+}
+
+/* Style the footer */
+.footer {
+  @include background-opacity($bar-color, $navbar-selector-opacity);
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 5px;
+
+  p {
+    font-size: 18px;
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Hack to center cols correctly */
+.center-block {
+  float: none;
+}
+
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
