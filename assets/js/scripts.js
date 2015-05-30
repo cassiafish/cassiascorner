@@ -4,18 +4,25 @@ $(document).ready(function () {
         $('.design h3').css("color", "#2e5a64");
     }, function() {
         $('.design h3').css("color", "#fff1df");
+    }).click(function(e) {
+        goToByScroll(".design-container");
     });
 
     $('.nav-container .about').hover(function(e) {
         $('.about h3').css("color", "#2e5a64");
     }, function() {
         $('.about h3').css("color", "#fff1df");
+    }).click(function(e) {
+        goToByScroll(".about-container");
     });
+
 
     $('.nav-container .contact').hover(function(e) {
         $('.contact h3').css("color", "#2e5a64");
     }, function() {
         $('.contact h3').css("color", "#fff1df");
+    }).click(function(e) {
+        goToByScroll(".contact-container");
     });
 
 });

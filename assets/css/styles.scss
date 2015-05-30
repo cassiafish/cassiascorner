@@ -4,8 +4,10 @@ $secondary-color:            #19323b;
 $third-color:                #2e5a64;
 $forth-color:                #70b98b;
 $fifth-color:                #fff1df;
+$sixth-color:                #fecf9b;
+$seventh-color:              #d87862;
 $header1-font-color:         $main-color;
-$header2-font-color:          $fifth-color;
+$header2-font-color:         $fifth-color;
 $font-color:                 $fifth-color;
 
 // Fonts
@@ -21,6 +23,8 @@ $link-color:                 $secondary-color;
 $link-color-hover:           $third-color;
 $navbar-selector-opacity:    1;
 $bar-color:                  $secondary-color;
+$design-container-color:     $sixth-color;
+$about-container-color:      $seventh-color;
 
 /* This mixin creates rbga color from hex and opacity */
 @mixin background-opacity($color, $opacity: 0.5) {
@@ -46,18 +50,8 @@ $bar-color:                  $secondary-color;
 html, body {
   font-family: $p-font-stack;
   @include background-opacity($background-overlay-color, $background-overlay-opacity);
-}
+  background-image: url("../img/img-noise-361x370.png");
 
-/* Style the href links */
-a:link, a:visited {
-  color: $link-color;
-}
-a:hover, a:active {
-  color: $link-color-hover;
-  text-decoration: none;
-}
-
-.info-container {
   h1 {
     color: $header1-font-color;
     font-family: $h1-font-stack;
@@ -96,303 +90,418 @@ a:hover, a:active {
   }
 }
 
-.top-background {
-  @include background-opacity($background-overlay-color, $background-overlay-opacity);
-  background-image: url("../img/img-noise-361x370.png");
+/* Style the href links */
+a:link, a:visited {
+  color: $link-color;
+}
+a:hover, a:active {
+  color: $link-color-hover;
+  text-decoration: none;
 }
 
-/* Style the main content */
-.top-container {
+.container {
+  @media (min-width: 1200px) {
+    width: 1080px;
+  }
+}
+
+.info-container {
   padding: 50px 0 200px;
   max-width: 1080px;
   margin: 0 auto !important;
   float: none !important;
+}
 
-  .header {
-    position: relative;
-    right: 60px;
-  }
+/*
+  Top container
+*/
+.top-background {
+  .top-container {
+    padding: 15px 0 110px;
 
-  p {
-    color: $font-color;
-    margin-top: 20px;
-    font-size: 22px;
-  }
-
-  .big-balloon {
-    @include at2x("../img/big-airballoon", png, 100px, 147px);
-    width: 100px;
-    height: 147px;
-    position: relative;
-    left: 80px;
-    top: 55px;
-  }
-
-  .med-balloon {
-    @include at2x("../img/med-airballoon", png, 75px, 110px);
-    width: 75px;
-    height: 110px;
-    position: relative;
-    left: 200px;
-    top: 65px;
-  }
-
-  .sm-balloon {
-    @include at2x("../img/small-airballoon", png, 50px, 74px);
-    width: 50px;
-    height: 74px;
-    position: relative;
-    left: 80px;
-    top: 65px;
-  }
-
-  .cherry-blossoms {
-    @include at2x("../img/cherryblossoms", png, 700px, 157px);
-    width: 700px;
-    height: 157px;
-    position: relative;
-    top: 20px;
-  }
-
-  @media (max-width: 992px) {
-    padding: 50px 0 150px;
+    /* fix right margin */
+    .row {
+      margin-right: 0px;
+    }
 
     .header {
       position: relative;
-      right: 60px;
+      right: 45px;
     }
 
-    .med-balloon {
-      left: 180px;
+    p {
+      color: $font-color;
+      margin-top: 20px;
+      font-size: 22px;
     }
-
-    h1 {
-      font-size: 100px;
-      line-height: 95px;
-    }
-
-    h2 {
-      font-size: 30px;
-    }
-
-    .cherry-blossoms {
-       @include at2x("../img/cherryblossoms992", png, 610px, 137px);
-      width: 610px;
-      height: 137px;
-    }
-  }
-
-  @media (max-width: 870px) {
-    padding: 50px 0 125px;
 
     .big-balloon {
-      left: 30px;
+      @include at2x("../img/big-airballoon", png, 100px, 147px);
+      width: 100px;
+      height: 147px;
+      position: relative;
+      left: 60px;
+      top: 55px;
     }
 
     .med-balloon {
-      left: 100px;
+      @include at2x("../img/med-airballoon", png, 75px, 110px);
+      width: 75px;
+      height: 110px;
+      position: relative;
+      left: 180px;
+      top: 65px;
     }
 
     .sm-balloon {
-      left: 30px;
-    }
-  }
-
-  @media (max-width: 800px) {
-    padding: 25px 0 75px;
-
-    h1 {
-      font-size: 80px;
-      line-height: 80px;
-    }
-
-    h2 {
-      font-size: 25px;
-    }
-
-    .big-balloon {
-       @include at2x("../img/big-airballoon768", png, 75px, 111px);
-      width: 75px;
-      height: 111px;
-      position: relative;
-      left: 20px;
-      top: 50px;
-    }
-
-    .med-balloon {
-       @include at2x("../img/med-airballoon768", png, 50px, 74px);
+      @include at2x("../img/small-airballoon", png, 50px, 74px);
       width: 50px;
       height: 74px;
       position: relative;
-      left: 70px;
-      top: 60px;
-    }
-
-    .sm-balloon {
-       @include at2x("../img/small-airballoon768", png, 30px, 44px);
-      width: 30px;
-      height: 44px;
-      position: relative;
-      left: 20px;
+      left: 60px;
       top: 65px;
     }
 
     .cherry-blossoms {
-       @include at2x("../img/cherryblossoms768", png, 500px, 112px);
-      width: 500px;
-      height: 112px;
-    }
-  }
-
-  @media (max-width: 640px) {
-    padding: 20px 0 50px;
-
-    .header {
-      right: 30px;
-    }
-
-    h1 {
-      font-size: 60px;
-      line-height: 60px;
-    }
-
-    h2 {
-      font-size: 18px;
-    }
-
-    .big-balloon {
-      left: 30px;
-      top: 38px;
-    }
-
-    .med-balloon {
-      left: 100px;
+      @include at2x("../img/cherryblossoms", png, 700px, 157px);
+      width: 700px;
+      height: 157px;
+      position: relative;
       top: 20px;
+      right: -15px;
     }
 
-    .sm-balloon {
-      left: 30px;
-      top: -10px;
+    @media (max-width: 992px) {
+      .med-balloon {
+        left: 180px;
+      }
+
+      h1 {
+        font-size: 100px;
+        line-height: 95px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .cherry-blossoms {
+        @include at2x("../img/cherryblossoms992", png, 610px, 137px);
+        width: 610px;
+        height: 137px;
+        right: -15px;
+      }
     }
 
-    .cherry-blossoms {
-      @include at2x("../img/cherryblossoms640", png, 360px, 81px);
-      width: 360px;
-      height: 81px;
-      top: 10px;
-    }
-  }
+    @media (max-width: 870px) {
+      padding: 50px 0 125px;
 
-  @media (max-width: 520px) {
-    padding-top: 0;
+      .big-balloon {
+        left: 30px;
+      }
 
-    h1 {
-      font-size: 50px;
-      line-height: 60px;
-    }
+      .med-balloon {
+        left: 100px;
+      }
 
-    h2 {
-      font-size: 14px;
+      .sm-balloon {
+        left: 30px;
+      }
     }
 
-    h2 {
-      padding-bottom: 10px;
+    @media (max-width: 800px) {
+      padding: 25px 0 75px;
+
+      h1 {
+        font-size: 80px;
+        line-height: 80px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      .big-balloon {
+        @include at2x("../img/big-airballoon768", png, 75px, 111px);
+        width: 75px;
+        height: 111px;
+        position: relative;
+        left: 20px;
+        top: 50px;
+      }
+
+      .med-balloon {
+        @include at2x("../img/med-airballoon768", png, 50px, 74px);
+        width: 50px;
+        height: 74px;
+        position: relative;
+        left: 70px;
+        top: 60px;
+      }
+
+      .sm-balloon {
+        @include at2x("../img/small-airballoon768", png, 30px, 44px);
+        width: 30px;
+        height: 44px;
+        position: relative;
+        left: 20px;
+        top: 65px;
+      }
+
+      .cherry-blossoms {
+        @include at2x("../img/cherryblossoms768", png, 500px, 112px);
+        width: 500px;
+        height: 112px;
+        right: -15px;
+      }
     }
 
-    .big-balloon {
-      display: none;
+    @media (max-width: 640px) {
+      padding-bottom: 30px;
+
+      .header {
+        right: 30px;
+      }
+
+      h1 {
+        font-size: 60px;
+        line-height: 60px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      .big-balloon {
+        left: 30px;
+        top: 38px;
+      }
+
+      .med-balloon {
+        left: 100px;
+        top: 20px;
+      }
+
+      .sm-balloon {
+        left: 30px;
+        top: -20px;
+      }
+
+      .cherry-blossoms {
+        @include at2x("../img/cherryblossoms640", png, 360px, 81px);
+        width: 360px;
+        height: 81px;
+        top: 10px;
+        right: -15px;
+      }
     }
 
-    .med-balloon {
-      top: 80px;
-      left: 20px;
-    }
+    @media (max-width: 520px) {
+      .header {
+        top: -20px;
+      }
 
-    .sm-balloon {
-      top: 90px;
-      left: 45px;
-    }
+      h1 {
+        font-size: 50px;
+        line-height: 60px;
+      }
 
-    .cherry-blossoms {
-     @include at2x("../img/cherryblossoms480", png, 300px, 67px);
-      width: 300px;
-      height: 67px;
-      top: 5px;
+      h2 {
+        font-size: 14px;
+      }
+
+      h2 {
+        padding-bottom: 10px;
+      }
+
+      .big-balloon {
+        display: none;
+      }
+
+      .med-balloon {
+        top: 60px;
+        left: 10px;
+      }
+
+      .sm-balloon {
+        top: 70px;
+        left: 45px;
+      }
+
+      .cherry-blossoms {
+        @include at2x("../img/cherryblossoms480", png, 300px, 67px);
+        width: 300px;
+        height: 67px;
+        top: -15px;
+        right: -15px;
+      }
     }
   }
 }
 
-.nav-container {
+/*
+  Navigation button bar
+*/
+.nav-background {
   @include background-opacity($main-color, 1);
-  padding: 20px 0 0 0;
 
-  h3 {
-    position: relative;
-    top: 107px;
-  }
+  .nav-container {
+    padding: 20px 0 0 0;
 
-  .design, .about, .contact{
-    cursor: pointer;
-  }
+    h3 {
+      position: relative;
+      top: 107px;
+    }
 
-  .design-button {
-    margin-bottom: 20px;
-    width: 210px;
-    height: 210px;
-    border: 4px solid $fifth-color;
-    border-radius: 50%;
-    background: $secondary-color;
-  }
+    .design, .about, .contact {
+      cursor: pointer;
+    }
 
-  .about-button {
-    margin-bottom: 20px;
-    width: 210px;
-    height: 210px;
-    border: 4px solid $fifth-color;
-    border-radius: 50%;
-    background: $secondary-color;
-  }
+    .design-button {
+      margin-bottom: 20px;
+      width: 210px;
+      height: 210px;
+      border: 4px solid $fifth-color;
+      border-radius: 50%;
+      background: $secondary-color;
+    }
 
-  .contact-button {
-    width: 210px;
-    height: 210px;
-    border: 4px solid $fifth-color;
-    border-radius: 50%;
-    background: $secondary-color;
-  }
+    .about-button {
+      margin-bottom: 20px;
+      width: 210px;
+      height: 210px;
+      border: 4px solid $fifth-color;
+      border-radius: 50%;
+      background: $secondary-color;
+    }
 
-  .design-image {
-     @include at2x("../img/design", png, 200px, 143px);
-    width: 200px;
-    height: 143px;
-  }
+    .contact-button {
+      width: 210px;
+      height: 210px;
+      border: 4px solid $fifth-color;
+      border-radius: 50%;
+      background: $secondary-color;
+    }
 
-  .about-image {
-     @include at2x("../img/about", png, 200px, 143px);
-    width: 200px;
-    height: 143px;
-  }
+    .design-image {
+      @include at2x("../img/design", png, 200px, 143px);
+      width: 200px;
+      height: 143px;
+    }
 
-  .contact-image {
-     @include at2x("../img/contact", png, 200px, 143px);
-    width: 200px;
-    height: 143px;
+    .about-image {
+      @include at2x("../img/about", png, 200px, 143px);
+      width: 200px;
+      height: 143px;
+    }
+
+    .contact-image {
+      @include at2x("../img/contact", png, 200px, 143px);
+      width: 200px;
+      height: 143px;
+    }
   }
 }
 
-/* Style the footer */
-.footer {
-  @include background-opacity($bar-color, $navbar-selector-opacity);
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 5px;
+/*
+  Design container
+*/
+.design-background {
+  @include background-opacity($design-container-color, 1);
+
+  .design-container {
+    padding: 70px 0 50px 0;
+
+    h2 {
+      text-align: left;
+    }
+
+    .design-image {
+      width: 270px;
+      height: 220px;
+    }
+
+    img {
+      max-width: 200px;
+      max-height: 200px;
+    }
+
+    @media (max-width: 640px) {
+      padding: 20px 0 0 0;
+
+      .design-image {
+        width: 170px;
+        height: 120px;
+      }
+
+      img {
+        max-width: 100px;
+        max-height: 100px;
+      }
+    }
+  }
+}
+
+/*
+  About container
+*/
+.about-background {
+  @include background-opacity($about-container-color, 1);
+
+  .about-container {
+    padding: 50px 0 50px 0;
+
+    h2 {
+      text-align: left;
+    }
+
+    strong {
+      font-family: $h1-font-stack;
+      font-size: 30px;
+      color: $secondary-color;
+    }
+
+    p {
+      font-size: 25px;
+      color: $secondary-color;
+    }
+
+    .flower-image {
+      width: 500px;
+    }
+
+    .me-image {
+      width: 350px;
+      border-radius: 50%;
+      border: 4px solid #FFF;
+    }
+  }
+}
+
+/*
+  Contact container
+*/
+.contact-container {
+  padding: 50px 0 50px 0;
+
+  h2 {
+    text-align: left;
+    font-family: $h1-font-stack;
+    color: $main-color;
+    font-size: 48px;
+  }
 
   p {
-    font-size: 18px;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
 
-    @media (max-width: 480px) {
-      font-size: 16px;
-    }
+  a.email {
+    color: #FFFFFF;
+  }
+
+  a:hover.email {
+    color: $third-color;
   }
 }
 
@@ -412,4 +521,10 @@ a:hover, a:active {
   text-align:left;
   /* inline-block space fix */
   margin-right:-4px;
+}
+
+/* Center align in div */
+.vcenter {
+  vertical-align: middle;
+  float: none;
 }
