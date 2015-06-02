@@ -5,7 +5,7 @@ $(document).ready(function () {
     }, function() {
         $('.design h3').css("color", "#fff1df");
     }).click(function(e) {
-        goToByScroll(".design-container");
+        goToByScroll(".nav-container");
     });
 
     $('.nav-container .about').hover(function(e) {
@@ -44,7 +44,7 @@ function isMobile(userAgent) {
  */
 function goToByScroll(id) {
     $('html,body').animate({
-        scrollTop: $(id).offset().top - 50
+        scrollTop: $(id).offset().top
     }, 'slow', function () {
     });
 }
