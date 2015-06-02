@@ -116,6 +116,7 @@ a:hover, a:active {
   Top container
 */
 .top-background {
+
   .top-container {
     padding: 15px 0 110px;
 
@@ -298,16 +299,17 @@ a:hover, a:active {
 
     @media (max-width: 520px) {
       .header {
-        top: -20px;
+        top: -30px;
+        right: 10px;
       }
 
       h1 {
-        font-size: 50px;
+        font-size: 55px;
         line-height: 60px;
       }
 
       h2 {
-        font-size: 14px;
+        font-size: 16px;
       }
 
       h2 {
@@ -578,6 +580,8 @@ a:hover, a:active {
   padding: 50px 0 50px 0;
 
   h2 {
+    position: relative;
+    left: -5px;
     text-align: left;
     font-family: $h1-font-stack;
     color: $main-color;
