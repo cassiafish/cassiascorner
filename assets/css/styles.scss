@@ -47,10 +47,18 @@ $about-container-color:      $seventh-color;
   }
 }
 
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $background-overlay-color url("../img/img-noise-361x370.png") repeat;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+}
+
 html, body {
   font-family: $p-font-stack;
-  @include background-opacity($background-overlay-color, $background-overlay-opacity);
-  background-image: url("../img/img-noise-361x370.png");
 
   h1 {
     color: $header1-font-color;
@@ -88,23 +96,23 @@ html, body {
   strong {
     color: $main-color;
   }
+
+  /* Style the href links */
+  a:link, a:visited {
+    color: $link-color;
+  }
+  a:hover, a:active {
+    color: $link-color-hover;
+    text-decoration: none;
+  }
 }
 
-/* Style the href links */
-a:link, a:visited {
-  color: $link-color;
-}
-a:hover, a:active {
-  color: $link-color-hover;
-  text-decoration: none;
-}
-
+/* Set max width of 1080 */
 .container {
   @media (min-width: 1200px) {
     width: 1080px;
   }
 }
-
 .info-container {
   padding: 50px 0 200px;
   max-width: 1080px;
@@ -115,239 +123,237 @@ a:hover, a:active {
 /*
   Top container
 */
-.top-background {
+.top-container {
+  padding: 15px 0 110px;
 
-  .top-container {
-    padding: 15px 0 110px;
+  /* fix right margin */
+  .row {
+    margin-right: 0px;
+  }
 
-    /* fix right margin */
-    .row {
-      margin-right: 0px;
+  .header {
+    position: relative;
+    right: 45px;
+  }
+
+  p {
+    color: $font-color;
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .big-balloon {
+    @include at2x("../img/big-airballoon", png, 100px, 147px);
+    width: 100px;
+    height: 147px;
+    position: relative;
+    left: 60px;
+    top: 55px;
+  }
+
+  .med-balloon {
+    @include at2x("../img/med-airballoon", png, 75px, 110px);
+    width: 75px;
+    height: 110px;
+    position: relative;
+    left: 180px;
+    top: 65px;
+  }
+
+  .sm-balloon {
+    @include at2x("../img/small-airballoon", png, 50px, 74px);
+    width: 50px;
+    height: 74px;
+    position: relative;
+    left: 60px;
+    top: 65px;
+  }
+
+  .cherry-blossoms {
+    @include at2x("../img/cherryblossoms", png, 700px, 157px);
+    width: 700px;
+    height: 157px;
+    position: relative;
+    top: 20px;
+    right: -15px;
+  }
+
+  @media (max-width: 992px) {
+    .med-balloon {
+      left: 180px;
     }
 
-    .header {
-      position: relative;
-      right: 45px;
+    h1 {
+      font-size: 100px;
+      line-height: 95px;
     }
 
-    p {
-      color: $font-color;
-      margin-top: 20px;
-      font-size: 22px;
+    h2 {
+      font-size: 30px;
     }
+
+    .cherry-blossoms {
+      @include at2x("../img/cherryblossoms992", png, 610px, 137px);
+      width: 610px;
+      height: 137px;
+      right: -15px;
+    }
+  }
+
+  @media (max-width: 870px) {
+    padding: 50px 0 125px;
 
     .big-balloon {
-      @include at2x("../img/big-airballoon", png, 100px, 147px);
-      width: 100px;
-      height: 147px;
-      position: relative;
-      left: 60px;
-      top: 55px;
+      left: 30px;
     }
 
     .med-balloon {
-      @include at2x("../img/med-airballoon", png, 75px, 110px);
-      width: 75px;
-      height: 110px;
-      position: relative;
-      left: 180px;
-      top: 65px;
+      left: 100px;
     }
 
     .sm-balloon {
-      @include at2x("../img/small-airballoon", png, 50px, 74px);
+      left: 30px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding: 25px 0 75px;
+
+    h1 {
+      font-size: 80px;
+      line-height: 80px;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+
+    .big-balloon {
+      @include at2x("../img/big-airballoon768", png, 75px, 111px);
+      width: 75px;
+      height: 111px;
+      position: relative;
+      left: 20px;
+      top: 50px;
+    }
+
+    .med-balloon {
+      @include at2x("../img/med-airballoon768", png, 50px, 74px);
       width: 50px;
       height: 74px;
       position: relative;
-      left: 60px;
+      left: 70px;
+      top: 60px;
+    }
+
+    .sm-balloon {
+      @include at2x("../img/small-airballoon768", png, 30px, 44px);
+      width: 30px;
+      height: 44px;
+      position: relative;
+      left: 20px;
       top: 65px;
     }
 
     .cherry-blossoms {
-      @include at2x("../img/cherryblossoms", png, 700px, 157px);
-      width: 700px;
-      height: 157px;
-      position: relative;
-      top: 20px;
+      @include at2x("../img/cherryblossoms768", png, 500px, 112px);
+      width: 500px;
+      height: 112px;
       right: -15px;
     }
+  }
 
-    @media (max-width: 992px) {
-      .med-balloon {
-        left: 180px;
-      }
+  @media (max-width: 640px) {
+    padding-bottom: 30px;
 
-      h1 {
-        font-size: 100px;
-        line-height: 95px;
-      }
-
-      h2 {
-        font-size: 30px;
-      }
-
-      .cherry-blossoms {
-        @include at2x("../img/cherryblossoms992", png, 610px, 137px);
-        width: 610px;
-        height: 137px;
-        right: -15px;
-      }
+    .header {
+      right: 30px;
     }
 
-    @media (max-width: 870px) {
-      padding: 50px 0 125px;
-
-      .big-balloon {
-        left: 30px;
-      }
-
-      .med-balloon {
-        left: 100px;
-      }
-
-      .sm-balloon {
-        left: 30px;
-      }
+    h1 {
+      font-size: 60px;
+      line-height: 60px;
     }
 
-    @media (max-width: 800px) {
-      padding: 25px 0 75px;
-
-      h1 {
-        font-size: 80px;
-        line-height: 80px;
-      }
-
-      h2 {
-        font-size: 25px;
-      }
-
-      .big-balloon {
-        @include at2x("../img/big-airballoon768", png, 75px, 111px);
-        width: 75px;
-        height: 111px;
-        position: relative;
-        left: 20px;
-        top: 50px;
-      }
-
-      .med-balloon {
-        @include at2x("../img/med-airballoon768", png, 50px, 74px);
-        width: 50px;
-        height: 74px;
-        position: relative;
-        left: 70px;
-        top: 60px;
-      }
-
-      .sm-balloon {
-        @include at2x("../img/small-airballoon768", png, 30px, 44px);
-        width: 30px;
-        height: 44px;
-        position: relative;
-        left: 20px;
-        top: 65px;
-      }
-
-      .cherry-blossoms {
-        @include at2x("../img/cherryblossoms768", png, 500px, 112px);
-        width: 500px;
-        height: 112px;
-        right: -15px;
-      }
+    h2 {
+      font-size: 18px;
     }
 
-    @media (max-width: 640px) {
-      padding-bottom: 30px;
-
-      .header {
-        right: 30px;
-      }
-
-      h1 {
-        font-size: 60px;
-        line-height: 60px;
-      }
-
-      h2 {
-        font-size: 18px;
-      }
-
-      .big-balloon {
-        left: 30px;
-        top: 38px;
-      }
-
-      .med-balloon {
-        left: 100px;
-        top: 20px;
-      }
-
-      .sm-balloon {
-        left: 30px;
-        top: -20px;
-      }
-
-      .cherry-blossoms {
-        @include at2x("../img/cherryblossoms640", png, 360px, 81px);
-        width: 360px;
-        height: 81px;
-        top: 10px;
-        right: -15px;
-      }
+    .big-balloon {
+      left: 30px;
+      top: 38px;
     }
 
-    @media (max-width: 520px) {
-      .header {
-        top: -30px;
-        right: 10px;
-      }
+    .med-balloon {
+      left: 100px;
+      top: 20px;
+    }
 
-      h1 {
-        font-size: 55px;
-        line-height: 60px;
-      }
+    .sm-balloon {
+      left: 30px;
+      top: -20px;
+    }
 
-      h2 {
-        font-size: 16px;
-      }
+    .cherry-blossoms {
+      @include at2x("../img/cherryblossoms640", png, 360px, 81px);
+      width: 360px;
+      height: 81px;
+      top: 10px;
+      right: -15px;
+    }
+  }
 
-      h2 {
-        padding-bottom: 10px;
-      }
+  @media (max-width: 520px) {
+    .header {
+      top: -30px;
+      right: 10px;
+    }
 
-      .big-balloon {
-        display: none;
-      }
+    h1 {
+      font-size: 55px;
+      line-height: 60px;
+    }
 
-      .med-balloon {
-        top: 60px;
-        left: 10px;
-      }
+    h2 {
+      font-size: 16px;
+    }
 
-      .sm-balloon {
-        top: 70px;
-        left: 45px;
-      }
+    h2 {
+      padding-bottom: 10px;
+    }
 
-      .cherry-blossoms {
-        @include at2x("../img/cherryblossoms480", png, 300px, 67px);
-        width: 300px;
-        height: 67px;
-        top: -15px;
-        right: -15px;
-      }
+    .big-balloon {
+      display: none;
+    }
+
+    .med-balloon {
+      top: 60px;
+      left: 10px;
+    }
+
+    .sm-balloon {
+      top: 70px;
+      left: 45px;
+    }
+
+    .cherry-blossoms {
+      @include at2x("../img/cherryblossoms480", png, 300px, 67px);
+      width: 300px;
+      height: 67px;
+      top: -15px;
+      right: -15px;
     }
   }
 }
+
 
 /*
   Navigation button bar
 */
 .nav-background {
-  @include background-opacity($main-color, 1);
 
   .nav-container {
+    background-color: $main-color;
     padding: 20px 0 0 0;
 
     h3 {
@@ -502,9 +508,10 @@ a:hover, a:active {
   Design container
 */
 .design-background {
-  @include background-opacity($design-container-color, 1);
 
   .design-container {
+    @include background-opacity($design-container-color, 1);
+
     padding: 70px 0 50px 0;
 
     h2 {
@@ -541,10 +548,10 @@ a:hover, a:active {
   About container
 */
 .about-background {
-  @include background-opacity($about-container-color, 1);
 
   .about-container {
-    padding: 50px 0 50px 0;
+    @include background-opacity($about-container-color, 1);
+    padding: 50px 0 50px;
 
     h2 {
       text-align: left;
