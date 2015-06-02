@@ -400,6 +400,99 @@ a:hover, a:active {
       width: 200px;
       height: 143px;
     }
+
+    @media (max-width: 992px) {
+      h3 {
+        position: relative;
+        top: 82px;
+        font-size: 20px;
+      }
+
+      .design-button {
+        width: 157px;
+        height: 157px;
+      }
+
+      .about-button {
+        margin-bottom: 20px;
+        width: 157px;
+        height: 157px;
+      }
+
+      .contact-button {
+        width: 157px;
+        height: 157px;
+      }
+
+      .design-image {
+        @include at2x("../img/design992", png, 150px, 110px);
+        width: 150px;
+        height: 110px;
+      }
+
+      .about-image {
+        @include at2x("../img/about992", png, 150px, 110px);
+        width: 150px;
+        height: 110px;
+      }
+
+      .contact-image {
+        @include at2x("../img/contact992", png, 150px, 110px);
+        width: 150px;
+        height: 110px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      h3 {
+        position: relative;
+        top: 46px;
+        font-size: 14px;
+      }
+
+      .design-button {
+        width: 90px;
+        height: 90px;
+      }
+
+      .about-button {
+        margin-bottom: 20px;
+        width: 90px;
+        height: 90px;
+      }
+
+      .contact-button {
+        width: 90px;
+        height: 90px;
+      }
+
+      .design-image {
+        @include at2x("../img/design640", png, 86px, 63px);
+        width: 86px;
+        height: 63px;
+        position: relative;
+        top: -8px;
+        left: -2px;
+      }
+
+      .about-image {
+        @include at2x("../img/about640", png, 86px, 63px);
+        width: 86px;
+        height: 63px;
+        position: relative;
+        top: -8px;
+        left: -2px;
+      }
+
+      .contact-image {
+        @include at2x("../img/contact640", png, 86px, 63px);
+        width: 86px;
+        height: 63px;
+        position: relative;
+        top: -8px;
+        left: -2px;
+      }
+    }
   }
 }
 
