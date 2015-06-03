@@ -538,7 +538,7 @@ html, body {
       }
     }
 
-    @media (min-width: 320px) {
+    @media (max-width: 320px) {
       .design, .about, .contact {
         padding-left: 0 !important;
       }
@@ -584,8 +584,7 @@ html, body {
       }
     }
 
-    @media (min-width: 320px) {
-
+    @media (max-width: 320px) {
       .design-image {
         width: 150px;
         height: 106px;
