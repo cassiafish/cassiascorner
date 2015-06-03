@@ -343,6 +343,42 @@ html, body {
       top: -15px;
       right: -15px;
     }
+
+    @media (min-width: 320px) {
+      padding-bottom: 20px;
+
+      .header {
+        top: -30px;
+        right: 5px;
+      }
+
+      h1 {
+        font-size: 44px;
+        line-height: 40px;
+      }
+
+      h2 {
+        font-size: 12px;
+      }
+
+      .med-balloon {
+        top: 30px;
+        left: 10px;
+      }
+
+      .sm-balloon {
+        top: 30px;
+        left: 45px;
+      }
+
+      .cherry-blossoms {
+        @include at2x("../img/cherryblossoms320", png, 250px, 56px);
+        width: 250px;
+        height: 56px;
+        top: -20px;
+        right: -15px;
+      }
+    }
   }
 }
 
@@ -501,6 +537,12 @@ html, body {
         left: -2px;
       }
     }
+
+    @media (min-width: 320px) {
+      .design, .about, .contact {
+        padding-left: 0 !important;
+      }
+    }
   }
 }
 
@@ -541,6 +583,14 @@ html, body {
         max-height: 100px;
       }
     }
+
+    @media (min-width: 320px) {
+
+      .design-image {
+        width: 150px;
+        height: 106px;
+      }
+    }
   }
 }
 
@@ -576,11 +626,6 @@ html, body {
       width: 350px;
       border-radius: 50%;
       border: 4px solid #FFF;
-
-      @media (max-width: 640px) {
-        position: relative;
-        left: -3px;
-      }
     }
   }
 }
