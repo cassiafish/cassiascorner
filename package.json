@@ -1,5 +1,5 @@
 {
-  "name": "nibty.com",
+  "name": "Cassias Corner",
   "version": "1.0.0",
   "description": "My Personal Website",
   "main": "public/index.html",
@@ -30,7 +30,7 @@
   "author": "Nicholas Pettas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nibty/nibty.com/issues"
+    "url": "https://github.com/cassiafish/cassiascorner/issues"
   },
-  "homepage": "https://github.com/nibty/nibty.com"
+  "homepage": "https://github.com/cassiafish/cassiascorner"
 }
