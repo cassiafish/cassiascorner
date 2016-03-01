@@ -622,10 +622,14 @@ html, body {
     }
 
     .me-image {
-      width: 350px;
+      width: 300px;
       border-radius: 50%;
       border: 4px solid #FFF;
     }
+  }
+
+  .container {
+    padding: 0 50px;
   }
 }
 
