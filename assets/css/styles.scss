@@ -113,9 +113,10 @@ html, body {
     width: 1080px;
   }
 }
+
 .info-container {
   padding: 50px 0 200px;
-  max-width: 1080px;
+  //max-width: 1080px;
   margin: 0 auto !important;
   float: none !important;
 }
@@ -125,6 +126,7 @@ html, body {
 */
 .top-container {
   padding: 15px 0 110px;
+  max-width: 1080px;
 
   /* fix right margin */
   .row {
@@ -628,8 +630,10 @@ html, body {
     }
   }
 
-  .container {
-    padding: 0 50px;
+  @media (min-width: 1200px) {
+    .container {
+      padding: 0 78px;
+    }
   }
 }
 
