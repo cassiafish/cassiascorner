@@ -65,7 +65,7 @@
             <ul class="nav navbar-nav">
                 <li class=""><a href="/">Home</a></li>
                 <li class="design-nav"><a href="/#design">Design</a></li>
-                <li class=""><a href="photos">Photography</a></li>
+                <li class=""><a href="/photos">Photography</a></li>
                 <li class="about-nav"><a href="/#about">About</a></li>
                 <li class="contact-nav"><a href="/#contact">Contact</a></li>
             </ul>
