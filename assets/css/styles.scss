@@ -22,7 +22,7 @@ $background-overlay-opacity: 1;
 $link-color:                 $secondary-color;
 $link-color-hover:           $third-color;
 $navbar-selector-opacity:    1;
-$bar-color:                  $secondary-color;
+$bar-color:                  $main-color;
 $design-container-color:     $sixth-color;
 $about-container-color:      $seventh-color;
 
@@ -125,7 +125,7 @@ html, body {
   Top container
 */
 .top-container {
-  padding: 15px 0 110px;
+  padding: 80px 0 110px;
   max-width: 1080px;
 
   /* fix right margin */
@@ -203,7 +203,7 @@ html, body {
   }
 
   @media (max-width: 870px) {
-    padding: 50px 0 125px;
+    padding: 80px 0 125px;
 
     .big-balloon {
       left: 30px;
@@ -219,7 +219,7 @@ html, body {
   }
 
   @media (max-width: 800px) {
-    padding: 25px 0 75px;
+    padding: 60px 0 75px;
 
     h1 {
       font-size: 80px;
@@ -348,6 +348,7 @@ html, body {
 
     @media (min-width: 320px) {
       padding-bottom: 20px;
+      padding-top: 90px;
 
       .header {
         top: -30px;
@@ -688,4 +689,59 @@ html, body {
 .vcenter {
   vertical-align: middle;
   float: none;
+}
+
+.image-container-sm {
+  display: inline-block;
+  width: 125px;
+  height: 83px;
+  margin: 10px;
+}
+
+.image-container-md {
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+}
+
+.image-container-lg {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+}
+
+.responsive-image-container {
+  text-align: center;
+}
+
+.img-placeholder {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+}
+
+/* Style navbar */
+.navbar {
+  @include background-opacity($bar-color, .9);
+  border-width: 0;
+  margin-bottom: 0;
+}
+
+/* Git navbar item hover a nice background */
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: $third-color;
+  //@include background-opacity($bar-color, .8);
+}
+
+/* Give the navbar active item a nice background color */
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus {
+  background: $link-color-hover;
+}
+.navbar-inverse .navbar-nav>.active>a:hover  {
+  background: $link-color-hover;
 }

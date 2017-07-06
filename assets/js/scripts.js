@@ -1,30 +1,38 @@
 $(document).ready(function () {
 
-    $('.nav-container .design').hover(function(e) {
-        $('.design h3').css("color", "#2e5a64");
-    }, function() {
-        $('.design h3').css("color", "#fff1df");
-    }).click(function(e) {
-        goToByScroll(".nav-container");
+    $("li.home-nav").click(function () {
+        changeUrl("home", "/");
+        goToByScroll(".top-container");
     });
 
-    $('.nav-container .about').hover(function(e) {
-        $('.about h3').css("color", "#2e5a64");
-    }, function() {
-        $('.about h3').css("color", "#fff1df");
-    }).click(function(e) {
+    $("li.design-nav").click(function () {
+        changeUrl("design", "#design");
+        goToByScroll(".design-container");
+    });
+
+    $("li.about-nav").click(function () {
+        changeUrl("about", "#about");
         goToByScroll(".about-container");
     });
 
-
-    $('.nav-container .contact').hover(function(e) {
-        $('.contact h3').css("color", "#2e5a64");
-    }, function() {
-        $('.contact h3').css("color", "#fff1df");
-    }).click(function(e) {
+    $("li.contact-nav").click(function () {
+        changeUrl("contact", "#contact");
         goToByScroll(".contact-container");
     });
 
+    // Set current menu item as active
+    $('.navbar li').click(function (e) {
+        // var $this = $(this);
+        // $('.navbar li.active').removeClass('active');
+        // if (!$this.hasClass('active')) {
+        //     $this.addClass('active');
+        // }
+
+        // Remove dropdown window on click
+        if ($(".navbar-toggle").is(":visible")) {
+            $(".navbar-collapse").removeClass("in").addClass("collapse");
+        }
+    });
 });
 
 /**

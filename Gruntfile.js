@@ -25,7 +25,8 @@ module.exports = function (grunt) {
                     'assets/js/*.js',
                     'node_modules/bootstrap/dist/js/bootstrap.min.js',
                     'node_modules/jquery.backstretch/jquery.backstretch.min.js',
-                    'node_modules/retina.js/dist/retina.min.js'
+                    'node_modules/retina.js/dist/retina.min.js',
+                    'node_modules/imagizer-js/dist/imagizer.min.js'
                 ],
                 dest: 'public/js/app.js'
             },
@@ -75,7 +76,7 @@ module.exports = function (grunt) {
         clean: {
             js: ["public/js/*.js", "!public/js/app.min.js"],
             css: ["public/css/*.css", "!public/css/app.min.css"],
-            sass: ["assets/css/*.css", "assets/css/*.css.map", "!assets/css/*.scss", "!/assets/css/*.sass"]
+            sass: ["assets/css/*.css.map", "!assets/css/*.scss", "!/assets/css/*.sass"]
         }
     });
 

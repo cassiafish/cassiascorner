@@ -4,10 +4,11 @@
   "description": "My Personal Website",
   "main": "public/index.html",
   "dependencies": {
-    "jquery-backstretch": "https://github.com/srobbin/jquery-backstretch.git",
-    "retina": "https://github.com/imulus/retinajs.git",
     "bootstrap": "^3.3.4",
-    "jquery": "^2.1.4"
+    "imagizer-js": "^0.2.1",
+    "jquery": "^2.1.4",
+    "jquery-backstretch": "https://github.com/srobbin/jquery-backstretch.git",
+    "retina": "https://github.com/imulus/retinajs.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
