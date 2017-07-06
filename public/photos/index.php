@@ -101,7 +101,7 @@
     <div class="row responsive-image-container">
 
         <?php
-        $files = glob(dirname(__FILE__) . "/img/photos/*");
+        $files = glob(dirname(__FILE__) . "/../img/photos/*");
 
         foreach($files as $file) {
             $file = pathinfo($file, PATHINFO_BASENAME);

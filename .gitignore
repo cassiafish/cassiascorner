@@ -1,6 +1,5 @@
 node_modules
 .idea
 .sass-cache
-assets/css/*.css
 public/css/*
 public/js/*
