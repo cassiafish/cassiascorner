@@ -26,7 +26,9 @@ module.exports = function (grunt) {
                     'node_modules/bootstrap/dist/js/bootstrap.min.js',
                     'node_modules/jquery.backstretch/jquery.backstretch.min.js',
                     'node_modules/retina.js/dist/retina.min.js',
-                    'node_modules/imagizer-js/dist/imagizer.min.js'
+                    'node_modules/imagizer-js/dist/imagizer.min.js',
+                    'node_modules/lazysizes/lazysizes.js'
+
                 ],
                 dest: 'public/js/app.js'
             },

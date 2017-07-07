@@ -106,13 +106,13 @@
         foreach($files as $file) {
             $file = pathinfo($file, PATHINFO_BASENAME);
 
-            echo '<div class="image-container-sm hidden-sm hidden-md hidden-lg"><a class="swipebox" rel="gallery-sm" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
+            echo '<div class="image-container image-container-sm hidden-sm hidden-md hidden-lg"><a class="swipebox" rel="gallery-sm" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img width="140px" height="93px" class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
                 . '?crop=fit&height=93&width=140"></a></div>';
 
-            echo '<div class="image-container-md hidden-xs hidden-md hidden-lg"><a class="swipebox" rel="gallery-md" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
+            echo '<div class="image-container image-container-md hidden-xs hidden-md hidden-lg"><a class="swipebox" rel="gallery-md" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img width="200px" height="150px" class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
                 . '?crop=fit&height=150&width=200"></a></div>';
 
-            echo '<div class="image-container-lg hidden-xs hidden-sm"><a class="swipebox" rel="gallery-lg" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
+            echo '<div class="image-container image-container-lg hidden-xs hidden-sm"><a class="swipebox" rel="gallery-lg" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img width="300px" height="200px" class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
                 . '?crop=fit&height=200&width=300"></a></div>';
         }
 

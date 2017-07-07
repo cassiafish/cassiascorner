@@ -52,6 +52,7 @@ $about-container-color:      $seventh-color;
   top: 0;
   left: 0;
   background: $background-overlay-color url("../img/img-noise-361x370.png") repeat;
+  transform: translate3d(0,0,0);
   z-index: -5;
   width: 100%;
   height: 125%;
@@ -691,6 +692,10 @@ html, body {
   float: none;
 }
 
+.image-container {
+  box-shadow: 0 1px 1px 0 #000000;
+}
+
 .image-container-sm {
   display: inline-block;
   width: 140px;
@@ -727,6 +732,7 @@ html, body {
   @include background-opacity($bar-color, .9);
   border-width: 0;
   margin-bottom: 0;
+  box-shadow: 0 0 3px 0 #000000;
 }
 
 /* Git navbar item hover a nice background */
