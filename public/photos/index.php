@@ -106,13 +106,13 @@
         foreach($files as $file) {
             $file = pathinfo($file, PATHINFO_BASENAME);
 
-            echo '<div class="image-container-sm hidden-sm hidden-md hidden-lg"><a class="gallery-sm" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'?w=800&h=800"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
+            echo '<div class="image-container-sm hidden-sm hidden-md hidden-lg"><a class="swipebox" rel="gallery-sm" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'?w=800&h=800"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
                 . '?crop=fit&height=83&width=125"></a></div>';
 
-            echo '<div class="image-container-md hidden-xs hidden-md hidden-lg"><a class="gallery-md" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'?w=800&h=800"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
+            echo '<div class="image-container-md hidden-xs hidden-md hidden-lg"><a class="swipebox" rel="gallery-md" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'?w=800&h=800"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
                 . '?crop=fit&height=150&width=200"></a></div>';
 
-            echo '<div class="image-container-lg hidden-xs hidden-sm"><a class="gallery-lg" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'?w=800&h=800"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
+            echo '<div class="image-container-lg hidden-xs hidden-sm"><a class="swipebox" rel="gallery-lg" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'?w=800&h=800"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
                 . '?crop=fit&height=200&width=300"></a></div>';
         }
 
@@ -146,9 +146,7 @@
     })();
 
     $( document ).ready(function() {
-//        $('.gallery-sm').colorbox({rel:'gallery-sm', retinaImage: true, retinaUrl: true, retinaSuffix: "?width=300&height=200"});
-//        $('.gallery-md').colorbox({rel:'gallery-md', retinaImage: true, retinaUrl: true, retinaSuffix: "?width=300&height=200"});
-        $('.gallery-lg').colorbox({rel:'gallery-lg', retinaImage: true, retinaUrl: true, retinaSuffix: "?width=300&height=200"});
+        $( '.swipebox' ).swipebox();
     });
 </script>
 

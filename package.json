@@ -8,8 +8,7 @@
     "imagizer-js": "^0.2.1",
     "jquery": "^2.1.4",
     "jquery-backstretch": "https://github.com/srobbin/jquery-backstretch.git",
-    "retina": "https://github.com/imulus/retinajs.git",
-    "jquery-colorbox": "1.6.4"
+    "retina": "https://github.com/imulus/retinajs.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
