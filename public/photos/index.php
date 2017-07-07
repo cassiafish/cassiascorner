@@ -107,7 +107,7 @@
             $file = pathinfo($file, PATHINFO_BASENAME);
 
             echo '<div class="image-container-sm hidden-sm hidden-md hidden-lg"><a class="swipebox" rel="gallery-sm" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
-                . '?crop=fit&height=83&width=125"></a></div>';
+                . '?crop=fit&height=93&width=140"></a></div>';
 
             echo '<div class="image-container-md hidden-xs hidden-md hidden-lg"><a class="swipebox" rel="gallery-md" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
                 . '?crop=fit&height=150&width=200"></a></div>';

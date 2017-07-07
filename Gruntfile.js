@@ -13,7 +13,7 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 files: {
-                    'assets/css/nibty.css': 'assets/css/styles.scss'
+                    'public/css/styles.css': 'assets/css/styles.scss'
                 }
             }
         },
@@ -33,7 +33,8 @@ module.exports = function (grunt) {
             css: {
                 src: [
                     'node_modules/bootstrap/dist/css/bootstrap.min.css',
-                    'assets/css/*.css'
+                    'public/css/styles.css',
+                    'assets/css/swipebox.css'
                 ],
                 dest: 'public/css/app.css'
             }
