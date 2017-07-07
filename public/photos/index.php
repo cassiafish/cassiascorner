@@ -106,13 +106,13 @@
         foreach($files as $file) {
             $file = pathinfo($file, PATHINFO_BASENAME);
 
-            echo '<div class="image-container-sm hidden-sm hidden-md hidden-lg"><a class="swipebox" rel="gallery-sm" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'?w=800&h=800"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
+            echo '<div class="image-container-sm hidden-sm hidden-md hidden-lg"><a class="swipebox" rel="gallery-sm" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
                 . '?crop=fit&height=83&width=125"></a></div>';
 
-            echo '<div class="image-container-md hidden-xs hidden-md hidden-lg"><a class="swipebox" rel="gallery-md" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'?w=800&h=800"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
+            echo '<div class="image-container-md hidden-xs hidden-md hidden-lg"><a class="swipebox" rel="gallery-md" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
                 . '?crop=fit&height=150&width=200"></a></div>';
 
-            echo '<div class="image-container-lg hidden-xs hidden-sm"><a class="swipebox" rel="gallery-lg" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'?w=800&h=800"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
+            echo '<div class="image-container-lg hidden-xs hidden-sm"><a class="swipebox" rel="gallery-lg" href="https://cassiascorner.imagizer.com/img/photos/'.$file.'"><img class="imagizer" data-src="https://cassiascorner.imagizer.com/img/photos/' . $file
                 . '?crop=fit&height=200&width=300"></a></div>';
         }
 
@@ -125,7 +125,7 @@
 <!-- javascript -->
 <script src="../js/app.min.js"></script>
 
-<script>
+<script type="text/javascript">
     (function() {
         imagizerClient.config.imagizerHost = "cassiascorner.imagizer.com";
         imagizerClient.config.useHttps = true;
@@ -145,8 +145,8 @@
         imagizerClient.loadImages(".imagizer");
     })();
 
-    $( document ).ready(function() {
-        $( '.swipebox' ).swipebox();
+    $(document).ready(function() {
+        $('.swipebox').swipebox();
     });
 </script>
 
