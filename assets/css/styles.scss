@@ -1,6 +1,6 @@
 // Colors
-$main-color:                 #fda3a3;
-$secondary-color:            #19323b;
+$main-color:                 #fff;
+$secondary-color:            #333333;
 $third-color:                #2e5a64;
 $forth-color:                #70b98b;
 $fifth-color:                #fff1df;
@@ -12,7 +12,7 @@ $font-color:                 $fifth-color;
 
 // Fonts
 $p-font-stack:               'Cabin', sans-serif;
-$h1-font-stack:              'Lobster Two', cursive;
+$h1-font-stack:              'Raleway', cursive;
 $h2-font-stack:              'Cabin', sans-serif;
 $h3-font-stack:              'Cabin', sans-serif;
 
@@ -22,9 +22,23 @@ $background-overlay-opacity: 1;
 $link-color:                 $secondary-color;
 $link-color-hover:           $third-color;
 $navbar-selector-opacity:    1;
-$bar-color:                  $main-color;
+$bar-color:                  #FFF;
 $design-container-color:     $sixth-color;
 $about-container-color:      $seventh-color;
+$navbar-font:                #222;
+//
+//-bg color - #333333
+//
+//-nav bar - bg color - white
+//font color #333333
+//size about 24pts
+//
+//-header bg color - FDA3BD at 50% opacity
+//font size about 50pts
+//
+//-font - Raleway -white
+//
+//
 
 /* This mixin creates rbga color from hex and opacity */
 @mixin background-opacity($color, $opacity: 0.5) {
@@ -48,27 +62,32 @@ $about-container-color:      $seventh-color;
 }
 
 #bg {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  background: $background-overlay-color url("../img/img-noise-361x370.png") repeat;
-  transform: translate3d(0,0,0);
+  background: $background-overlay-color url("../img/astro_planets.png") center no-repeat;
+
+  //background: $background-overlay-color url("../img/img-noise-361x370.png") repeat;
+  //transform: translate3d(0,0,0);
   z-index: -5;
   width: 100%;
-  height: 125%;
+  height: 100%;
 }
 
 html, body {
   font-family: $p-font-stack;
 
   h1 {
+    background-color: #191919;
     color: $header1-font-color;
     font-family: $h1-font-stack;
-    font-size: 115px;
+    font-size: 50px;
+    margin-top:0;
+    padding-top:0;
     margin-bottom: 0;
     padding-bottom: 0;
-    line-height: 110px;
-    text-align: right;
+    line-height: 75px;
+    text-align: center;
   }
 
   h2 {
@@ -126,12 +145,14 @@ html, body {
   Top container
 */
 .top-container {
-  padding: 80px 0 110px;
+  height: 680px;
+  padding: 50px 0 110px;
   max-width: 1080px;
 
   /* fix right margin */
   .row {
-    margin-right: 0px;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .header {
@@ -145,124 +166,35 @@ html, body {
     font-size: 22px;
   }
 
-  .big-balloon {
-    @include at2x("../img/big-airballoon", png, 100px, 147px);
-    width: 100px;
-    height: 147px;
-    position: relative;
-    left: 60px;
-    top: 55px;
-  }
-
-  .med-balloon {
-    @include at2x("../img/med-airballoon", png, 75px, 110px);
-    width: 75px;
-    height: 110px;
-    position: relative;
-    left: 180px;
-    top: 65px;
-  }
-
-  .sm-balloon {
-    @include at2x("../img/small-airballoon", png, 50px, 74px);
-    width: 50px;
-    height: 74px;
-    position: relative;
-    left: 60px;
-    top: 65px;
-  }
-
-  .cherry-blossoms {
-    @include at2x("../img/cherryblossoms", png, 700px, 157px);
-    width: 700px;
-    height: 157px;
-    position: relative;
-    top: 20px;
-    right: -15px;
-  }
-
   @media (max-width: 992px) {
     .med-balloon {
       left: 180px;
     }
 
-    h1 {
-      font-size: 100px;
-      line-height: 95px;
-    }
+    //h1 {
+    //  font-size: 100px;
+    //  line-height: 95px;
+    //}
 
     h2 {
       font-size: 30px;
-    }
-
-    .cherry-blossoms {
-      @include at2x("../img/cherryblossoms992", png, 610px, 137px);
-      width: 610px;
-      height: 137px;
-      right: -15px;
     }
   }
 
   @media (max-width: 870px) {
     padding: 80px 0 125px;
-
-    .big-balloon {
-      left: 30px;
-    }
-
-    .med-balloon {
-      left: 100px;
-    }
-
-    .sm-balloon {
-      left: 30px;
-    }
   }
 
   @media (max-width: 800px) {
     padding: 60px 0 75px;
 
-    h1 {
-      font-size: 80px;
-      line-height: 80px;
-    }
+    //h1 {
+    //  font-size: 80px;
+    //  line-height: 80px;
+    //}
 
     h2 {
       font-size: 25px;
-    }
-
-    .big-balloon {
-      @include at2x("../img/big-airballoon768", png, 75px, 111px);
-      width: 75px;
-      height: 111px;
-      position: relative;
-      left: 20px;
-      top: 50px;
-    }
-
-    .med-balloon {
-      @include at2x("../img/med-airballoon768", png, 50px, 74px);
-      width: 50px;
-      height: 74px;
-      position: relative;
-      left: 70px;
-      top: 60px;
-    }
-
-    .sm-balloon {
-      @include at2x("../img/small-airballoon768", png, 30px, 44px);
-      width: 30px;
-      height: 44px;
-      position: relative;
-      left: 20px;
-      top: 65px;
-    }
-
-    .cherry-blossoms {
-      @include at2x("../img/cherryblossoms768", png, 500px, 112px);
-      width: 500px;
-      height: 112px;
-      right: -15px;
     }
   }
 
@@ -273,36 +205,13 @@ html, body {
       right: 30px;
     }
 
-    h1 {
-      font-size: 60px;
-      line-height: 60px;
-    }
+    //h1 {
+    //  font-size: 60px;
+    //  line-height: 60px;
+    //}
 
     h2 {
       font-size: 18px;
-    }
-
-    .big-balloon {
-      left: 30px;
-      top: 38px;
-    }
-
-    .med-balloon {
-      left: 100px;
-      top: 20px;
-    }
-
-    .sm-balloon {
-      left: 30px;
-      top: -20px;
-    }
-
-    .cherry-blossoms {
-      @include at2x("../img/cherryblossoms640", png, 360px, 81px);
-      width: 360px;
-      height: 81px;
-      top: 10px;
-      right: -15px;
     }
   }
 
@@ -312,10 +221,10 @@ html, body {
       right: 10px;
     }
 
-    h1 {
-      font-size: 55px;
-      line-height: 60px;
-    }
+    //h1 {
+    //  font-size: 55px;
+    //  line-height: 60px;
+    //}
 
     h2 {
       font-size: 16px;
@@ -323,28 +232,6 @@ html, body {
 
     h2 {
       padding-bottom: 10px;
-    }
-
-    .big-balloon {
-      display: none;
-    }
-
-    .med-balloon {
-      top: 60px;
-      left: 10px;
-    }
-
-    .sm-balloon {
-      top: 70px;
-      left: 45px;
-    }
-
-    .cherry-blossoms {
-      @include at2x("../img/cherryblossoms480", png, 300px, 67px);
-      width: 300px;
-      height: 67px;
-      top: -15px;
-      right: -15px;
     }
 
     @media (min-width: 320px) {
@@ -363,188 +250,6 @@ html, body {
 
       h2 {
         font-size: 12px;
-      }
-
-      .med-balloon {
-        top: 30px;
-        left: 10px;
-      }
-
-      .sm-balloon {
-        top: 30px;
-        left: 45px;
-      }
-
-      .cherry-blossoms {
-        @include at2x("../img/cherryblossoms320", png, 250px, 56px);
-        width: 250px;
-        height: 56px;
-        top: -20px;
-        right: -15px;
-      }
-    }
-  }
-}
-
-
-/*
-  Navigation button bar
-*/
-.nav-background {
-
-  .nav-container {
-    background-color: $main-color;
-    padding: 20px 0 0 0;
-
-    h3 {
-      position: relative;
-      top: 107px;
-    }
-
-    .design, .about, .contact {
-      cursor: pointer;
-    }
-
-    .design-button {
-      margin-bottom: 20px;
-      width: 210px;
-      height: 210px;
-      border: 4px solid $fifth-color;
-      border-radius: 50%;
-      background: $secondary-color;
-    }
-
-    .about-button {
-      margin-bottom: 20px;
-      width: 210px;
-      height: 210px;
-      border: 4px solid $fifth-color;
-      border-radius: 50%;
-      background: $secondary-color;
-    }
-
-    .contact-button {
-      width: 210px;
-      height: 210px;
-      border: 4px solid $fifth-color;
-      border-radius: 50%;
-      background: $secondary-color;
-    }
-
-    .design-image {
-      @include at2x("../img/design", png, 200px, 143px);
-      width: 200px;
-      height: 143px;
-    }
-
-    .about-image {
-      @include at2x("../img/about", png, 200px, 143px);
-      width: 200px;
-      height: 143px;
-    }
-
-    .contact-image {
-      @include at2x("../img/contact", png, 200px, 143px);
-      width: 200px;
-      height: 143px;
-    }
-
-    @media (max-width: 992px) {
-      h3 {
-        position: relative;
-        top: 82px;
-        font-size: 20px;
-      }
-
-      .design-button {
-        width: 157px;
-        height: 157px;
-      }
-
-      .about-button {
-        margin-bottom: 20px;
-        width: 157px;
-        height: 157px;
-      }
-
-      .contact-button {
-        width: 157px;
-        height: 157px;
-      }
-
-      .design-image {
-        @include at2x("../img/design992", png, 150px, 110px);
-        width: 150px;
-        height: 110px;
-      }
-
-      .about-image {
-        @include at2x("../img/about992", png, 150px, 110px);
-        width: 150px;
-        height: 110px;
-      }
-
-      .contact-image {
-        @include at2x("../img/contact992", png, 150px, 110px);
-        width: 150px;
-        height: 110px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      h3 {
-        position: relative;
-        top: 46px;
-        font-size: 14px;
-      }
-
-      .design-button {
-        width: 90px;
-        height: 90px;
-      }
-
-      .about-button {
-        margin-bottom: 20px;
-        width: 90px;
-        height: 90px;
-      }
-
-      .contact-button {
-        width: 90px;
-        height: 90px;
-      }
-
-      .design-image {
-        @include at2x("../img/design640", png, 86px, 63px);
-        width: 86px;
-        height: 63px;
-        position: relative;
-        top: -8px;
-        left: -2px;
-      }
-
-      .about-image {
-        @include at2x("../img/about640", png, 86px, 63px);
-        width: 86px;
-        height: 63px;
-        position: relative;
-        top: -8px;
-        left: -2px;
-      }
-
-      .contact-image {
-        @include at2x("../img/contact640", png, 86px, 63px);
-        width: 86px;
-        height: 63px;
-        position: relative;
-        top: -8px;
-        left: -2px;
-      }
-    }
-
-    @media (max-width: 320px) {
-      .design, .about, .contact {
-        padding-left: 0 !important;
       }
     }
   }
@@ -731,13 +436,22 @@ html, body {
 .navbar {
   @include background-opacity($bar-color, .9);
   border-width: 0;
-  margin-bottom: 0;
   box-shadow: 0 0 3px 0 #000000;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.navbar-nav {
+  a {
+    font-size: 20px;
+  }
+
+  float: none;
 }
 
 /* Git navbar item hover a nice background */
 .navbar-inverse .navbar-nav>li>a {
-  color: white;
+  color: $navbar-font;
 }
 .navbar-inverse .navbar-nav>li>a:hover {
   color: $third-color;
