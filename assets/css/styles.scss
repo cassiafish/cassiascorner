@@ -1,31 +1,33 @@
 // Colors
 $main-color:                 #fff;
-$secondary-color:            #333333;
-$third-color:                #2e5a64;
+$secondary-color:            #000;
+$third-color:                #88cdab;
 $forth-color:                #70b98b;
 $fifth-color:                #fff1df;
 $sixth-color:                #ffffff;
 $seventh-color:              #d87862;
-$header1-font-color:         $main-color;
-$header2-font-color:         $fifth-color;
-$font-color:                 $fifth-color;
+$header1-font-color:         $secondary-color;
+$header2-font-color:         $secondary-color;
+$font-color:                 $secondary-color;
 
 // Fonts
-$p-font-stack:               'Cabin', sans-serif;
-$h1-font-stack:              'Raleway', cursive;
-$h2-font-stack:              'Cabin', sans-serif;
-$h3-font-stack:              'Cabin', sans-serif;
+$p-font-stack:               'Raleway', sans-serif;
+$h1-font-stack:              'Raleway', sans-serif;
+$h2-font-stack:              'Raleway', sans-serif;
+$h3-font-stack:              'Raleway', sans-serif;
 
 // Set element colors
 $background-overlay-color:   $secondary-color;
 $background-overlay-opacity: 1;
 $link-color:                 $secondary-color;
-$link-color-hover:           $third-color;
+$link-color-hover:           $main-color;
 $navbar-selector-opacity:    1;
-$bar-color:                  #FFF;
+$bar-color:                  $main-color;
+$bar-color-opacity:          1;
 $design-container-color:     $sixth-color;
 $about-container-color:      $seventh-color;
-$navbar-font:                #222;
+$navbar-font:                $secondary-color;
+$navbar-link-color-hover:    $third-color;  
 //
 //-bg color - #333333
 //
@@ -65,7 +67,7 @@ $navbar-font:                #222;
   position: absolute;
   top: 0;
   left: 0;
-  background: $background-overlay-color url("../img/astro_planets.png") center no-repeat;
+  background: $background-overlay-color;
 
   //background: $background-overlay-color url("../img/img-noise-361x370.png") repeat;
   //transform: translate3d(0,0,0);
@@ -147,7 +149,7 @@ html, body {
 .top-container {
   height: 680px;
   padding: 50px 0 110px;
-  max-width: 1080px;
+  max-width: 900px;
 
   /* fix right margin */
   .row {
@@ -255,124 +257,6 @@ html, body {
   }
 }
 
-/*
-  Design container
-*/
-.design-background {
-
-  .design-container {
-    @include background-opacity($design-container-color, 1);
-
-    padding: 70px 0 50px 0;
-
-    h2 {
-      text-align: left;
-    }
-
-    .design-image {
-      width: 270px;
-      height: 220px;
-    }
-
-    img {
-      max-width: 200px;
-      max-height: 180px;
-    }
-
-    @media (max-width: 640px) {
-      padding: 20px 0 0 0;
-
-      .design-image {
-        width: 170px;
-        height: 120px;
-      }
-
-      img {
-        max-width: 100px;
-        max-height: 100px;
-      }
-    }
-
-    @media (max-width: 320px) {
-      .design-image {
-        width: 150px;
-        height: 106px;
-      }
-    }
-  }
-}
-
-/*
-  About container
-*/
-.about-background {
-
-  .about-container {
-    @include background-opacity($about-container-color, 1);
-    padding: 50px 0 50px;
-
-    h2 {
-      text-align: left;
-    }
-
-    strong {
-      font-family: $h1-font-stack;
-      font-size: 28px;
-      color: $secondary-color;
-    }
-
-    p {
-      font-size: 22px;
-      color: $secondary-color;
-    }
-
-    .flower-image {
-      width: 400px;
-    }
-
-    .me-image {
-      width: 210px;
-      border-radius: 50%;
-      border: 4px solid #FFF;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .container {
-      padding: 0 78px;
-    }
-  }
-}
-
-/*
-  Contact container
-*/
-.contact-container {
-  padding: 50px 0 50px 0;
-
-  h2 {
-    position: relative;
-    left: -5px;
-    text-align: left;
-    font-family: $h1-font-stack;
-    color: $main-color;
-    font-size: 48px;
-  }
-
-  p {
-    font-size: 24px;
-    color: #FFFFFF;
-  }
-
-  a.email {
-    color: #FFFFFF;
-  }
-
-  a:hover.email {
-    color: $third-color;
-  }
-}
-
 /* Hack to center cols correctly */
 .center-block {
   float: none;
@@ -434,10 +318,9 @@ html, body {
 
 /* Style navbar */
 .navbar {
-  @include background-opacity($bar-color, .9);
+  @include background-opacity($bar-color, $bar-color-opacity);
   border-width: 0;
   box-shadow: 0 0 3px 0 #000000;
-  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -454,7 +337,7 @@ html, body {
   color: $navbar-font;
 }
 .navbar-inverse .navbar-nav>li>a:hover {
-  color: $third-color;
+  color: $navbar-link-color-hover;
   //@include background-opacity($bar-color, .8);
 }
 
