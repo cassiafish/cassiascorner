@@ -5,11 +5,7 @@
   "main": "public/index.html",
   "dependencies": {
     "bootstrap": "^3",
-    "imagizer-js": "^0.2.1",
-    "jquery": "^2.1.4",
-    "jquery-backstretch": "https://github.com/srobbin/jquery-backstretch.git",
-    "retina": "https://github.com/imulus/retinajs.git",
-    "tether": "^1.4.0"
+    "jquery": "^2.1.4"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

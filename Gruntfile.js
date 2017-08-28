@@ -23,12 +23,7 @@ module.exports = function (grunt) {
                 src: [
                     'node_modules/jquery/dist/jquery.min.js',
                     'assets/js/*.js',
-                    'node_modules/tether/dist/js/tether.min.js',
-                    'node_modules/bootstrap/dist/js/bootstrap.min.js',
-                    'node_modules/jquery.backstretch/jquery.backstretch.min.js',
-                    'node_modules/retina.js/dist/retina.min.js',
-                    'node_modules/imagizer-js/dist/imagizer.min.js',
-                    'node_modules/lazysizes/lazysizes.js'
+                    'node_modules/bootstrap/dist/js/bootstrap.min.js'
 
                 ],
                 dest: 'public/js/app.js'

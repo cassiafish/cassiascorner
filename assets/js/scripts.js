@@ -3,24 +3,29 @@ $(document).ready(function () {
 
     $(".logo-wrapper").click(function () {
         $(".gallery-graphics-container").hide();
+        $(".contact-container").hide();
         $(".gallery-image-container").show();
         goToByScroll("body");
     });
 
     $("li.photography-nav").click(function () {
         $(".gallery-graphics-container").hide();
+        $(".contact-container").hide();
         $(".gallery-image-container").show();
         goToByScroll(".gallery-image-container");
     });
 
     $("li.graphics-nav").click(function () {
         $(".gallery-image-container").hide();
+        $(".contact-container").hide();
         $(".gallery-graphics-container").show();
         goToByScroll(".gallery-graphics-container");
     });
 
     $("li.contact-nav").click(function () {
-        changeUrl("contact", "#contact");
+        $(".gallery-image-container").hide();
+        $(".gallery-graphics-container").hide();
+        $(".contact-container").show();
         goToByScroll(".contact-container");
     });
 

@@ -181,8 +181,18 @@ html, body {
   max-width: $max-width;
   margin: 0 auto;
   padding-top: 20px;
+  display: none;
 
   .design-image {
     height: 250px;
   }
+}
+
+.contact-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: $third-color;
+  font-size: 18px;
+  display: none;
 }
