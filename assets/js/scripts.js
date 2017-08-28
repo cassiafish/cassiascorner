@@ -23,10 +23,8 @@ $(document).ready(function () {
     });
 
     $("li.contact-nav").click(function () {
-        $(".gallery-image-container").hide();
-        $(".gallery-graphics-container").hide();
-        $(".contact-container").show();
-        goToByScroll(".contact-container");
+        $(".contact-container").toggle();
+        goToByScroll("body");
     });
 
     // Set current menu item as active
