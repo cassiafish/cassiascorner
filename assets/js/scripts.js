@@ -1,18 +1,22 @@
 $(document).ready(function () {
+    $('.swipebox').swipebox();
 
-    $("li.home-nav").click(function () {
-        changeUrl("home", "/");
-        goToByScroll(".top-container");
+    $(".logo-wrapper").click(function () {
+        $(".gallery-graphics-container").hide();
+        $(".gallery-image-container").show();
+        goToByScroll("body");
     });
 
-    $("li.design-nav").click(function () {
-        changeUrl("design", "#design");
-        goToByScroll(".design-container");
+    $("li.photography-nav").click(function () {
+        $(".gallery-graphics-container").hide();
+        $(".gallery-image-container").show();
+        goToByScroll(".gallery-image-container");
     });
 
-    $("li.about-nav").click(function () {
-        changeUrl("about", "#about");
-        goToByScroll(".about-container");
+    $("li.graphics-nav").click(function () {
+        $(".gallery-image-container").hide();
+        $(".gallery-graphics-container").show();
+        goToByScroll(".gallery-graphics-container");
     });
 
     $("li.contact-nav").click(function () {
@@ -52,7 +56,7 @@ function isMobile(userAgent) {
  */
 function goToByScroll(id) {
     $('html,body').animate({
-        scrollTop: $(id).offset().top
+        scrollTop: $(id).offset().top - 60
     }, 'slow', function () {
     });
 }

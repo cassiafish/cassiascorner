@@ -1,46 +1,35 @@
 // Colors
-$main-color:                 #fff;
-$secondary-color:            #000;
-$third-color:                #88cdab;
-$forth-color:                #70b98b;
-$fifth-color:                #fff1df;
-$sixth-color:                #ffffff;
-$seventh-color:              #d87862;
-$header1-font-color:         $secondary-color;
-$header2-font-color:         $secondary-color;
-$font-color:                 $secondary-color;
+$main-color: #fff;
+$secondary-color: #000;
+$third-color: #88cdab;
+$forth-color: #70b98b;
+$fifth-color: #fff1df;
+$sixth-color: #ffffff;
+$seventh-color: #d87862;
+$header1-font-color: $secondary-color;
+$header2-font-color: $main-color;
+$font-color: $secondary-color;
 
 // Fonts
-$p-font-stack:               'Raleway', sans-serif;
-$h1-font-stack:              'Raleway', sans-serif;
-$h2-font-stack:              'Raleway', sans-serif;
-$h3-font-stack:              'Raleway', sans-serif;
+$p-font-stack: 'Raleway', sans-serif;
+$h1-font-stack: 'Raleway', sans-serif;
+$h2-font-stack: 'Raleway', sans-serif;
+$h3-font-stack: 'Raleway', sans-serif;
 
 // Set element colors
-$background-overlay-color:   $secondary-color;
+$background-overlay-color: $secondary-color;
 $background-overlay-opacity: 1;
-$link-color:                 $secondary-color;
-$link-color-hover:           $main-color;
-$navbar-selector-opacity:    1;
-$bar-color:                  $main-color;
-$bar-color-opacity:          1;
-$design-container-color:     $sixth-color;
-$about-container-color:      $seventh-color;
-$navbar-font:                $secondary-color;
-$navbar-link-color-hover:    $third-color;  
-//
-//-bg color - #333333
-//
-//-nav bar - bg color - white
-//font color #333333
-//size about 24pts
-//
-//-header bg color - FDA3BD at 50% opacity
-//font size about 50pts
-//
-//-font - Raleway -white
-//
-//
+$link-color: $secondary-color;
+$link-color-hover: $main-color;
+$navbar-selector-opacity: 1;
+$bar-color: $main-color;
+$bar-color-opacity: 1;
+$design-container-color: $sixth-color;
+$about-container-color: $seventh-color;
+$navbar-link-color: $secondary-color;
+$navbar-link-color-hover: $third-color;
+
+$max-width: 900px;
 
 /* This mixin creates rbga color from hex and opacity */
 @mixin background-opacity($color, $opacity: 0.5) {
@@ -48,35 +37,8 @@ $navbar-link-color-hover:    $third-color;
   background: rgba($color, $opacity);
 }
 
-@mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
-  $at1x_path: "#{$path}.#{$ext}";
-  $at2x_path: "#{$path}@2x.#{$ext}";
-
-  background-image: url("#{$at1x_path}");
-
-  @media all and (-webkit-min-device-pixel-ratio : 1.5),
-  all and (-o-min-device-pixel-ratio: 3/2),
-  all and (min--moz-device-pixel-ratio: 1.5),
-  all and (min-device-pixel-ratio: 1.5) {
-    background-image: url("#{$at2x_path}");
-    background-size: $w $h;
-  }
-}
-
-#bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: $background-overlay-color;
-
-  //background: $background-overlay-color url("../img/img-noise-361x370.png") repeat;
-  //transform: translate3d(0,0,0);
-  z-index: -5;
-  width: 100%;
-  height: 100%;
-}
-
 html, body {
+  background-color: $background-overlay-color;
   font-family: $p-font-stack;
 
   h1 {
@@ -84,8 +46,8 @@ html, body {
     color: $header1-font-color;
     font-family: $h1-font-stack;
     font-size: 50px;
-    margin-top:0;
-    padding-top:0;
+    margin-top: 0;
+    padding-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
     line-height: 75px;
@@ -95,10 +57,11 @@ html, body {
   h2 {
     padding-top: 0;
     margin-top: 0;
+    margin-bottom: 20px;
     color: $header2-font-color;
     font-family: $h2-font-stack;
     font-size: 35px;
-    text-align: right;
+    text-align: left;
   }
 
   h3 {
@@ -129,85 +92,10 @@ html, body {
   }
 }
 
-/* Set max width of 1080 */
-.container {
-  @media (min-width: 1200px) {
-    width: 1080px;
-  }
-}
-
-.top-container {
-  position: relative;
-  top: 50px;
-  max-width: 800px;
-  margin: 0 auto !important;
-  float: none !important;
-}
-
-/*
-  Top container
-*/
-.top-container-wrapper {
-
-}
-
-/* Hack to center cols correctly */
-.center-block {
-  float: none;
-}
-
-/* centered columns styles */
-.row-centered {
-  text-align:center;
-}
-.col-centered {
-  display:inline-block;
-  float:none;
-  /* reset the text-align */
-  text-align:left;
-  /* inline-block space fix */
-  margin-right:-4px;
-}
-
-/* Center align in div */
-.vcenter {
-  vertical-align: middle;
-  float: none;
-}
-
-.image-container {
-  box-shadow: 0 1px 1px 0 #000000;
-}
-
-.image-container-sm {
-  display: inline-block;
-  width: 140px;
-  height: 93px;
-  margin: 10px;
-}
-
-.image-container-md {
-  display: inline-block;
-  width: 200px;
-  height: 150px;
-  margin: 10px;
-}
-
-.image-container-lg {
-  display: inline-block;
-  width: 300px;
-  height: 200px;
-  margin: 10px;
-}
-
-.responsive-image-container {
-  text-align: center;
-}
-
-.img-placeholder {
-  display: inline-block;
-  width: 200px;
-  height: 100px;
+// remove horizontal scroll bars
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Style navbar */
@@ -216,53 +104,85 @@ html, body {
   border-width: 0;
   box-shadow: 0 0 3px 0 #000000;
   margin: 0 auto;
-}
+  padding: 5px 0;
 
-.navbar-nav {
+  .navbar-collapse {
+    border: none;
+  }
+
+  .navbar-collapse.in {
+    overflow-y: hidden;
+  }
+
+  .navbar-toggle {
+    float: none !important;
+    position: relative;
+    top: 28px;
+    background-color: $secondary-color;
+    margin-top: 0;
+
+    .icon-bar {
+      background-color: $third-color !important;
+    }
+  }
+
+  .small-logo-wrapper {
+    position: relative;
+    top: 12px;
+  }
+
   a {
+    color: $navbar-link-color !important;
     font-size: 20px;
   }
 
-  float: none;
+  a:focus {
+    color: $navbar-link-color !important;
+  }
+
+  a:hover {
+    color: $navbar-link-color-hover !important;
+  }
 }
 
-/* Git navbar item hover a nice background */
-.navbar-inverse .navbar-nav>li>a {
-  color: $navbar-font;
-}
-.navbar-inverse .navbar-nav>li>a:hover {
-  color: $navbar-link-color-hover;
-  //@include background-opacity($bar-color, .8);
+.top-container {
+  max-width: $max-width;
+  margin: auto !important;
+  float: none !important;
+  margin-top: 60px;
+
+  @media (max-width: 768px) {
+    margin-top: 100px !important;
+  }
 }
 
-/* Give the navbar active item a nice background color */
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus {
-  background: $link-color-hover;
-}
-.navbar-inverse .navbar-nav>.active>a:hover  {
-  background: $link-color-hover;
-}
+.pull-right {
+  float: right !important;
 
-.navbar-toggle {
-   float: none !important;
-   position: relative;
-   top: 25px;
-   background-color: $secondary-color;
- }
-
-.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
-  background-color: $secondary-color;
+  @media (max-width: 768px) {
+    position: relative;
+    top: 15px;
+    float: none !important;
+    text-align: center;
+  }
 }
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-  border: none;
+.gallery-image-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-top: 20px;
+
+  .gallery-image {
+    padding-bottom: 20px;
+  }
 }
 
-.icon-bar {
-  background-color: $third-color !important;
-}
+.gallery-graphics-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-top: 20px;
 
-.small-logo-wrapper {
-  position: relative;
-  top: 12px;
+  .design-image {
+    height: 250px;
+  }
 }
