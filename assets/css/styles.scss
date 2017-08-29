@@ -209,8 +209,13 @@ html, body {
   background-color: $third-color;
   font-size: 18px;
   display: none;
-  padding-top: 10px;
+  padding: 20px;
   z-index: 10;
+
+  h2 {
+    text-align: center;
+    font-size: 1.6em;
+  }
 
   @media(min-width: 769px) {
     position: absolute;
@@ -223,8 +228,10 @@ html, body {
     max-width: 767px;
     clear: both;
     margin-top: 0;
-    padding-top: 20px;
-    padding-bottom: 10px;
+
+    h2 {
+      font-size: 1.4em;
+    }
   }
 
   .email-link {

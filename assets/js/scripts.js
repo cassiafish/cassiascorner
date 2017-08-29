@@ -9,7 +9,13 @@ $(document).ready(function () {
     $(".logo-wrapper").click(function () {
         $(".top-container").show();
         $(".gallery-graphics-container").fadeOut();
-        $(".contact-container").fadeOut();
+
+        if (window.innerWidth <= 768) {
+            $(".contact-container").hide();
+        } else {
+            $(".contact-container").fadeOut();
+        }
+
         $(".gallery-image-container").fadeIn();
         goToByScroll("body");
         changeUrl("home", "/");
