@@ -19,7 +19,7 @@ $(document).ready(function () {
         $(".top-container").show();
         $(".gallery-graphics-container").hide();
         $(".contact-container").hide();
-        $(".gallery-image-container").show();
+        $(".gallery-image-container").fadeIn();
         goToByScroll(".gallery-image-container");
         changeUrl("photos", "/photos");
     });
@@ -28,7 +28,7 @@ $(document).ready(function () {
         $(".top-container").show();
         $(".gallery-image-container").hide();
         $(".contact-container").hide();
-        $(".gallery-graphics-container").show();
+        $(".gallery-graphics-container").fadeIn();
         goToByScroll(".gallery-graphics-container");
         changeUrl("graphics", "/graphics");
     });
