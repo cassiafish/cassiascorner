@@ -29,7 +29,8 @@ $about-container-color: $seventh-color;
 $navbar-link-color: $secondary-color;
 $navbar-link-color-hover: $third-color;
 
-$max-width: 900px;
+// width including 30px padding
+$max-width: 930px;
 
 /* This mixin creates rbga color from hex and opacity */
 @mixin background-opacity($color, $opacity: 0.5) {
@@ -167,6 +168,11 @@ html, body {
   margin: auto !important;
   float: none !important;
   display: none;
+
+  @media (max-width: 900px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .pull-right {
