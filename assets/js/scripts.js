@@ -8,9 +8,9 @@ $(document).ready(function () {
 
     $(".logo-wrapper").click(function () {
         $(".top-container").show();
-        $(".gallery-graphics-container").hide();
-        $(".contact-container").hide();
-        $(".gallery-image-container").show();
+        $(".gallery-graphics-container").fadeOut();
+        $(".contact-container").fadeOut();
+        $(".gallery-image-container").fadeIn();
         goToByScroll("body");
         changeUrl("home", "/");
     });
