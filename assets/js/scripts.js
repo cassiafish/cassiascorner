@@ -1,7 +1,13 @@
 $(document).ready(function () {
     $('.swipebox').swipebox();
 
+    $('.swipebox').click(function() {
+        $(".top-container").show();
+        $(".contact-container").hide();
+    });
+
     $(".logo-wrapper").click(function () {
+        $(".top-container").show();
         $(".gallery-graphics-container").hide();
         $(".contact-container").hide();
         $(".gallery-image-container").show();
@@ -9,6 +15,7 @@ $(document).ready(function () {
     });
 
     $("li.photography-nav").click(function () {
+        $(".top-container").show();
         $(".gallery-graphics-container").hide();
         $(".contact-container").hide();
         $(".gallery-image-container").show();
@@ -16,6 +23,7 @@ $(document).ready(function () {
     });
 
     $("li.graphics-nav").click(function () {
+        $(".top-container").show();
         $(".gallery-image-container").hide();
         $(".contact-container").hide();
         $(".gallery-graphics-container").show();
@@ -23,6 +31,12 @@ $(document).ready(function () {
     });
 
     $("li.contact-nav").click(function () {
+        if (window.innerWidth <= 768) {
+            $(".top-container").hide();
+        } else {
+            $(".top-container").show();
+        }
+
         $(".contact-container").toggle();
         goToByScroll("body");
     });
@@ -59,7 +73,7 @@ function isMobile(userAgent) {
  */
 function goToByScroll(id) {
     $('html,body').animate({
-        scrollTop: $(id).offset().top - 60
+        scrollTop: $(id).offset().top - $(".nav-space").height()
     }, 'slow', function () {
     });
 }
@@ -71,15 +85,26 @@ function goToByScroll(id) {
  * @param url
  */
 function changeUrl(page, url) {
-    if (typeof (history.pushState) != "undefined") {
+    if (typeof (history.pushState) !== "undefined") {
         var obj = {Page: page, Url: url};
         history.pushState(obj, obj.Page, obj.Url);
     }
 }
 
-/**
- * Scroll listener
- */
-$(window).scroll(function () {
+// /**
+//  * Scroll listener
+//  */
+// $(window).scroll(function () {
+//
+// });
 
+$( window ).resize(function() {
+    if (!$.swipebox.isOpen) {
+
+        if (window.innerWidth <= 768 && $(".contact-container").is(":visible")) {
+            $(".top-container").hide();
+        } else {
+            $(".top-container").show();
+        }
+    }
 });
