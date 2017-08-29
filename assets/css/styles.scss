@@ -130,12 +130,17 @@ html, body {
     }
   }
 
+  .logo-wrapper {
+    cursor: pointer;
+  }
+
   .small-logo-wrapper {
     position: relative;
     top: 12px;
   }
 
   a {
+    cursor: pointer;
     color: $navbar-link-color !important;
     font-size: 20px;
   }
