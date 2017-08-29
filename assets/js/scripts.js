@@ -12,6 +12,7 @@ $(document).ready(function () {
         $(".contact-container").hide();
         $(".gallery-image-container").show();
         goToByScroll("body");
+        changeUrl("home", "/");
     });
 
     $("li.photography-nav").click(function () {
@@ -20,6 +21,7 @@ $(document).ready(function () {
         $(".contact-container").hide();
         $(".gallery-image-container").show();
         goToByScroll(".gallery-image-container");
+        changeUrl("photos", "/photos");
     });
 
     $("li.graphics-nav").click(function () {
@@ -28,6 +30,7 @@ $(document).ready(function () {
         $(".contact-container").hide();
         $(".gallery-graphics-container").show();
         goToByScroll(".gallery-graphics-container");
+        changeUrl("graphics", "/graphics");
     });
 
     $("li.contact-nav").click(function () {
@@ -37,8 +40,9 @@ $(document).ready(function () {
             $(".top-container").show();
         }
 
-        $(".contact-container").toggle();
+        $(".contact-container").fadeToggle();
         goToByScroll("body");
+        changeUrl("contact", "/contact");
     });
 
     // Set current menu item as active
@@ -54,6 +58,28 @@ $(document).ready(function () {
             $(".navbar-collapse").removeClass("in").addClass("collapse");
         }
     });
+
+    if (window.location.pathname.match(/photos$/)) {
+        $(".top-container").show();
+        $(".gallery-image-container").show();
+
+    } else if (window.location.pathname.match(/graphics$/)) {
+        $(".top-container").show();
+        $(".gallery-graphics-container").show();
+
+    } else if (window.location.pathname.match(/contact/)) {
+        if (window.innerWidth <= 768) {
+            $(".top-container").hide();
+        } else {
+            $(".top-container").show();
+        }
+        $(".gallery-image-container").fadeIn();
+        $(".contact-container").fadeToggle();
+
+    } else {
+        $(".top-container").show();
+        $(".gallery-image-container").fadeIn();
+    }
 });
 
 /**
@@ -70,11 +96,16 @@ function isMobile(userAgent) {
  * Scroll to div
  *
  * @param id
+ * @param speed
  */
-function goToByScroll(id) {
+function goToByScroll(id, speed) {
+    if (speed === undefined) {
+        speed = 'slow';
+    }
+
     $('html,body').animate({
         scrollTop: $(id).offset().top - $(".nav-space").height()
-    }, 'slow', function () {
+    }, speed, function () {
     });
 }
 
