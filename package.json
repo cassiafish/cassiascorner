@@ -5,7 +5,8 @@
   "main": "public/index.html",
   "dependencies": {
     "bootstrap": "^3",
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "lazysizes": "^4.0.0-rc3"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
