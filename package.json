@@ -4,8 +4,9 @@
   "description": "My Personal Website",
   "main": "public/index.html",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.1.20",
     "bootstrap": "^3",
-    "jquery": "^2.1.4",
+    "jquery": "^3.2.1",
     "lazysizes": "^4.0.0-rc3"
   },
   "devDependencies": {

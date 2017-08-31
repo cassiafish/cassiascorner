@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    $('.swipebox').swipebox();
-
-    $('.swipebox').click(function() {
-        $(".top-container").show();
-        $(".contact-container").hide();
-    });
+    // $('.swipebox').swipebox();
+    //
+    // $('.swipebox').click(function() {
+    //     $(".top-container").show();
+    //     $(".contact-container").hide();
+    // });
 
     $(".logo-wrapper").click(function () {
         $(".top-container").show();
@@ -136,12 +136,9 @@ function changeUrl(page, url) {
 // });
 
 $( window ).resize(function() {
-    if (!$.swipebox.isOpen) {
-
-        if (window.innerWidth <= 768 && $(".contact-container").is(":visible")) {
-            $(".top-container").hide();
-        } else {
-            $(".top-container").show();
-        }
+    if (window.innerWidth <= 768 && $(".contact-container").is(":visible")) {
+        $(".top-container").hide();
+    } else {
+        $(".top-container").show();
     }
 });

@@ -244,3 +244,8 @@ html, body {
     color: $main-color !important;
   }
 }
+
+.fancybox-is-open .fancybox-bg {
+  opacity: .9 !important;
+  background-color: $secondary-color;
+}

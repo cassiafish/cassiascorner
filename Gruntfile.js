@@ -24,14 +24,15 @@ module.exports = function (grunt) {
                     'node_modules/jquery/dist/jquery.min.js',
                     'assets/js/*.js',
                     'node_modules/bootstrap/dist/js/bootstrap.min.js',
-                    'node_modules/lazysizes/lazysizes.js'
-
+                    'node_modules/lazysizes/lazysizes.js',
+                    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
                 ],
                 dest: 'public/js/app.js'
             },
             css: {
                 src: [
                     'node_modules/bootstrap/dist/css/bootstrap.min.css',
+                    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
                     'public/css/styles.css',
                     'assets/css/swipebox.css'
                 ],
