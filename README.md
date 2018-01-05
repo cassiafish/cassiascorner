@@ -8,26 +8,17 @@
 ## View
 Open ```public/index.html``` in your browser.
 
-## Dependencies (only needed if you are going to modify and compile the site).
-Download and install [node.js](https://nodejs.org/en/download/current/).
-Then run the following in the website's folder:
-```bash
-npm install -g grunt-cli
-npm install
-grunt
-```
-
 ## Modify
-- CSS styles (sass) assets/css/styles.scss
-- JS assets/js/scripts.js
-- HTML public/index.html
 
-Run ```grunt``` after to compile.
+### CSS
+```public/css/add.scss```
 
-## Compiled files
-- CSS public/css/styles.css
-- JS public/js/app.min.js
+### Javascript
+```public/js/app.js```
 
-## What to do if compiling is too difficult?
-Node.js and grunt can be a pain in the ass to install. Therefore, I have included the latests compiled files. 
-The website will work right out the the box. You can even modify the compiled files by hand (it may be difficult..).
+### HTML
+```public/index.html```
+
+## Why are the images not cropped?
+In the past this website used services provided by http://imagizer.com to handle real-time image manipulation.
+It no longer is. Someone will need to resize and crop the images by hand.
