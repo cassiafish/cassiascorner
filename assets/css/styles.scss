@@ -254,3 +254,17 @@ html, body {
   width: 60px;
   height: 60px;
 }
+
+
+.img-responsive {
+  padding-top: 25px;
+  transition: 100ms filter linear, 100ms -webkit-filter linear;
+
+}
+
+.img-responsive:hover {
+  filter: brightness(110%);
+  //-webkit-transition : -webkit-filter 1000ms linear
+  transition: 100ms filter linear, 100ms -webkit-filter linear;
+
+}
